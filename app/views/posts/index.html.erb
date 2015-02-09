@@ -1,0 +1,10 @@
+<h1>Pagina principal del blog</h1>
+
+<p>Articulos aqui:</p>
+
+<% @posts.each do |p| %>
+  <div class="post_wrapper">
+    <h2 class="title"><%= link_to p.title, p %></h2>
+    <p class="date"><%= p.created_at.strftime("%d %B, %Y") %></p>
+  </div>
+<% end %>
