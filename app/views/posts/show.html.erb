@@ -1,5 +1,8 @@
 <div id="post_content">
   <h1 class="title"><%= @post.title %></h1>
-  <p class="date">Agregado hace: <%= time_ago_in_words(@post.created_at) %></p>
+  <p class="date">Agregado hace: <%= time_ago_in_words(@post.created_at) %> |
+    <%= link_to "Editar", edit_post_path(@post) %> |
+    <%= link_to "Borrar", post_path(@post), method: :delete, data: { confirm: "Seguro?"} %>
+  </p>
   <p class-"body"><%= @post.body %></p>
 </div>
