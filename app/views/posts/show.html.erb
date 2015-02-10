@@ -5,4 +5,12 @@
     <%= link_to "Borrar", post_path(@post), method: :delete, data: { confirm: "Seguro?"} %>
   </p>
   <p class-"body"><%= @post.body %></p>
+
+  <div id="comments">
+    <h2><%= @post.comments.count %> Comentarios</h2>
+    <%= render @post.comments %>
+
+    <h3>Comentar:</h3>
+    <%= render "comments/form" %>
+  </div>
 </div>
