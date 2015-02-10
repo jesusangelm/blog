@@ -1,7 +1,8 @@
-<h1>Nuevo articulo:</h1>
+<div id="page_wrapper">
+  <h1>Nuevo articulo:</h1>
 
-<%= form_for :post, url: posts_path do |f| %>
-  <%= f.label :title %><br />
+  <%= form_for :post, url: posts_path do |f| %>
+    <%= f.label :title %><br />
   <%= f.text_field :title %><br />
   <br />
 
@@ -10,4 +11,5 @@
   <br />
 
   <%= f.submit %>
-<% end %>
+  <% end %>
+</div>
