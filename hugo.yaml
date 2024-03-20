@@ -1,3 +1,14 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseURL: https://jesusmarin.dev/
+languageCode: es-VE
+title: JesusMarin.Dev
+theme: jmdev
+
+paginate: 2
+
+params:
+  description: "Bienvenido a mi blog sobre programación y tecnología"
+  dateFormat: "2-1-2006"
+taxonomies:
+  tag: tags
+  category: categories
+  author: authors
