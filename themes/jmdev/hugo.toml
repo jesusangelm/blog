@@ -3,19 +3,29 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 
 [[menus.main]]
-name = 'Home'
+name = 'Inicio'
 pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
-pageRef = '/posts'
+name = 'Blog'
+pageRef = '/blog'
 weight = 20
 
 [[menus.main]]
-name = 'Tags'
+name = 'Etiquetas'
 pageRef = '/tags'
 weight = 30
+
+[[menus.main]]
+name = 'CV'
+pageRef = '/cv'
+weight = 40
+
+# [[menus.main]]
+# name = 'Acerca de'
+# pageRef = '/acerca_de'
+# weight = 40
 
 [module]
   [module.hugoVersion]

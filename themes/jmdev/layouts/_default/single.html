@@ -1,10 +1,22 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+<main class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <article class="blog-post">
+        <h2 class="display-5 link-body-emphasis mb-1">{{.Title}}</h2>
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+        <p class="blog-post-meta">
+          <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time> | 
+          {{range (.GetTerms "tags")}}
+            <a class="badge text-bg-dark" href={{.Permalink}}>{{.Name}}</a>
+          {{end}}
+        </p>
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+        {{ .Content }}
+        {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+      </article>
+    </div>
+  </div>
+</main>
 {{ end }}

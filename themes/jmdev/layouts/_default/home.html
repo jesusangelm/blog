@@ -1,7 +1,39 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+      {{ .Content }}
+      </div>
+    </div>
+
+    <h3 class="pb-4 mb-4 fst-italic border-bottom">
+      Los ultimos 3 artículos de mi blog
+    </h3>
+
+    <section>
+      {{ range (first 3 (where .Site.RegularPages "Section" "blog" ).ByDate.Reverse) }}
+        <article class="blog-post">
+          <h2 
+            class="display-5 link-body-emphasis mb-1">
+            <a 
+              class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover"
+              href="{{.RelPermalink}}">{{.LinkTitle}}
+            </a>
+          </h2>
+          {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ $dateHuman := .Date | time.Format ":date_long" }}
+          <p class="blog-post-meta">
+            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time> | 
+            {{range (.GetTerms "tags")}}
+              <a class="badge text-bg-dark" href={{.Permalink}}>{{.Name}}</a>
+            {{end}}
+          </p>
+
+          <p>{{ .Description }}</p>
+        </article>
+      {{ end }}
+    </section>
+  </div>
+</main>
 {{ end }}

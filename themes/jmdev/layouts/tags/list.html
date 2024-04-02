@@ -1,0 +1,42 @@
+{{define "main"}}
+  {{if eq .RelPermalink "/tags/"}}
+    <main class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Etiquetas
+          </h3>
+
+          {{range $.Site.Taxonomies.tags.ByCount}}
+            <article class="blog-post">
+              <h2 class="display-5 link-body-emphasis mb-1">
+                <a
+                  class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href="/tags/{{.Name}}">
+                  {{.Name}} <smal>({{.Count}})</smal>
+                </a>
+              </h2>
+            </article>
+          {{end}}
+        </div>
+      </div>
+    </main>
+  {{else}}
+    <main class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Articulos bajo la etiqueta #{{.Name}}
+          </h3>
+
+          {{ range .Paginator.Pages }}
+            <article class="blog-post">
+              <h2 class="display-5 link-body-emphasis mb-1"><a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="{{.RelPermalink}}">{{.LinkTitle}}</a></h2>
+              <p>{{ .Description }}</p>
+            </article>
+          {{ end }} {{ template "_internal/pagination.html" . }}
+        </div>
+      </div>
+    </main>
+  {{end}}
+{{end}}
