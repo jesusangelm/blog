@@ -33,3 +33,5 @@ markup:
       attribute:
         block: true
         title: true
+
+enableRobotsTXT: true
