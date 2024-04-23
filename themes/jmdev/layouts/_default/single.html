@@ -15,6 +15,10 @@
 
         {{ .Content }}
         {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+        <hr>
+        <div>
+          {{ partial "giscus.html" . }}
+        </div>
       </article>
     </div>
   </div>

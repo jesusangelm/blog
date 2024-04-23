@@ -12,6 +12,18 @@ params:
   author:
     email: contacto [ a T ] jesusmarin.dev
     name: Jesus Marin
+  giscus:
+    repo: jesusangelm/blog
+    repoID: R_kgDOLo1yWA
+    category: Comentarios
+    categoryID: DIC_kwDOLo1yWM4Ce4ZC
+    mapping: pathname
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: top
+    theme: preferred_color_scheme
+    lang: es
+    loading: lazy
 taxonomies:
   tag: tags
 
