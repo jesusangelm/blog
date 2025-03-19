@@ -41,7 +41,7 @@ perfectamente funcional en pocos minutos. Proveedores hay un montón, yo usare [
 Crear el clúster en [Vultr](https://www.vultr.com/?ref=6811149) tan solo toma unos cuantos clics y unos minutos, una vez
 creado dicho clúster podremos descargar un archivo de configuración el cual se usa para conectarse al clúster y administrarlo.
 
-![Vultr Kubernetes](https://cdn.is.jesusmarin.dev/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt5WXpreVpUbGxOQzFtTmpsakxUUmhaalF0WW1aaVlTMHhaalE0TVdRMk1EVXdPVFlHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--479e323ce9d6bd6e0969592d78fb0edfefe8695e/vultr_k8s_cluster_2023-04-12_17-48.png)
+![Vultr Kubernetes](https://ispz.b-cdn.net/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQsInB1ciI6ImJsb2JfaWQifX0=--ff8b5d2f7ebde28cfaca08323ea7023422f05769/vultr_k8s_cluster_2023-04-12_17-48.png)
 
 Generalmente, este archivo es un `.yml` y lo usaremos con `kubectl` para administrar el clúster.
 
@@ -95,7 +95,7 @@ la excepción ya que nos permite crear incluso una Base de datos en la misma loc
 Esto es lo que usaré, en mi caso, crearé una Base de datos PostgreSQL administrada en [Vultr](https://www.vultr.com/?ref=6811149) y usaremos la url de conexión
 que este otorga para que la app rails se conecte a esta BD.
 
-![Vultr PostgreSQL](https://cdn.is.jesusmarin.dev/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWt6WkdWaVpUbGtOUzB3TUdJeExUUmxOV0l0T0dSa09TMHpNbVl6WVRaak5XUTNNR0lHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--f1ee4a626f4e38fb90ced3b9714189fbc69227e3/vultr_postgresql_2023-04-12_17-51.png)
+![Vultr PostgreSQL](https://ispz.b-cdn.net/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjAsInB1ciI6ImJsb2JfaWQifX0=--78b27c493f8c80203870345ea965d973de58d9df/vultr_postgresql_2023-04-12_17-51.png)
 
 ## El Ingress controller
 
@@ -365,7 +365,7 @@ que se creyó automáticamente en [Vultr](https://www.vultr.com/?ref=6811149) al
 
 Nuestro único pod ya está ejecutándose, con lo que el deploy ha sido exitoso, bueno no del todo, todavía falta algunos pasos claves.
 
-![ImageStorage deployed on Kubernetes](https://cdn.is.jesusmarin.dev/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxqWVRKaU1qbGhOaTFtTVRRM0xUUXhPV1F0WWpsak55MWhZVFZrT0RnNU16WTFNV01HT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--43ed8a44aca11dc4166f72fbdc49b7707bc344de/imagestorage_kubernetes-2023-04-13_14-50.png)
+![ImageStorage deployed on Kubernetes](https://ispz.b-cdn.net/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTYsInB1ciI6ImJsb2JfaWQifX0=--43f26c31bcd513fa13496b029857e782fd8fe05c/imagestorage_kubernetes-2023-04-13_14-50.png)
 
 # Ejecutando comandos dentro del clúster
 
@@ -396,7 +396,7 @@ I, [2023-04-13T19:08:40.246748 #24]  INFO -- : Migrating to DeviseCreateAdminUse
 Una vez ejecutada las migraciones y cualquier otro comando necesario para los preparativos iniciales, solo queda comprobar vía el navegador que la app 
 se ejecuta como esperamos.
 
-![ImageStorage ActiveAdmin](https://cdn.is.jesusmarin.dev/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWswTkRSaFpXWXpOUzA1TXpJMUxUUXpaakV0T0RneU1TMDFZVEExTTJJeFlUa3laR01HT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--b8dd6c2055f5721fa3ec622031df24a05fe51534/imagestorage_adminpanel-2023-04-13_15-28.png)
+![ImageStorage ActiveAdmin](https://ispz.b-cdn.net/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OCwicHVyIjoiYmxvYl9pZCJ9fQ==--0e5a4bec12604fe3e0325e453e7bfcc22a6332f2/imagestorage_adminpanel-2023-04-13_15-28.png)
 
 # Escalando horizontalmente mediante los manifiestos
 
