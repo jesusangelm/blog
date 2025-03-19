@@ -6,7 +6,7 @@ tags = ['kubernetes', 'devops', 'k3s', 'k3sup']
 description = "Pasos basicos para crear un cluster kubernetes desde cero, ligero y funcional."
 +++
 
-![K3sup logo](https://is.jesusmarin.net/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--a83c6d9f279b67ec9870f3924a08cb38648efb13/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszNTAsMzUwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--9744bf5f7a4d2a91fff7932a7126070765a68041/k3sup.png)
+![K3sup logo](https://ispz.b-cdn.net/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTAsInB1ciI6ImJsb2JfaWQifX0=--a83c6d9f279b67ec9870f3924a08cb38648efb13/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJwbmciLCJyZXNpemVfdG9fbGltaXQiOlszNTAsMzUwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--9744bf5f7a4d2a91fff7932a7126070765a68041/k3sup.png)
 
 Como he comentado ya, desde hace poco he estado aprendiendo un poco acerca de Kubernetes. Luego
 de probar algunas soluciones de clúster administrado, me interesé por la posibilidad de 
