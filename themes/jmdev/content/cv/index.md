@@ -14,8 +14,7 @@ Mis competencias principales incluyen **Ruby**, **Rails**, **REST APIs**, **web 
 en **JavaScript**, y algunos conocimientos de **React** y **Node.js**.
 
 Estoy constantemente impulsado a expandir mi conjunto de habilidades
-y abrazar nuevos desafíos. Actualmente, estoy activamente involucrado en
-proyectos personales centrados en el aprendizaje de **Go** y **Svelte**.
+y abrazar nuevos desafíos.
 
 ## Experiencias:
 

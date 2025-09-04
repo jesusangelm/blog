@@ -4,7 +4,8 @@ languageCode: es-VE
 title: JesusMarin.Dev
 theme: jmdev
 
-paginate: 5
+pagination:
+  pagerSize: 5
 
 params:
   description: "Bienvenido a mi blog sobre programación y tecnología"
