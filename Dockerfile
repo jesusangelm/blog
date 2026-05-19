@@ -1,10 +1,10 @@
 # Stage 1
 FROM docker.io/alpine:3.19 AS build
-RUN apk add --update hugo
+RUN apk add --update hugo git
 
 WORKDIR /opt/HugoApp
 COPY . .
-RUN hugo --minify
+RUN HUGO_ENABLEGITINFO=false hugo --minify
 
 # Stage 2
 FROM docker.io/nginx:stable-alpine

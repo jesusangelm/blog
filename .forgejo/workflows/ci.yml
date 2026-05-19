@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Hugo site
+        run: |
+          apk add --update hugo git
+          hugo --minify
+
+  docker:
+    needs: build
+    runs-on: docker
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login to Forgejo Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: git.jesusmarin.dev
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.FORGEJO_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            git.jesusmarin.dev/${{ github.repository }}:latest
+            git.jesusmarin.dev/${{ github.repository }}:sha-${{ github.sha }}
