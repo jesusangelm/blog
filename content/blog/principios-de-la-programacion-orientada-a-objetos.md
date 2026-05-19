@@ -2,7 +2,7 @@
 title = "Principios de la programación orientada a objetos"
 date = 2024-05-07
 draft = false
-tags = ['programacion', 'poo',]
+tags = ['programacion', 'poo']
 description = "Descripción de los principios de la programación orientada a objetos."
 +++
 

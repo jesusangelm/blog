@@ -1,5 +1,5 @@
 +++
-title = "Usos básico de Podman"
+title = "Usos básicos de Podman"
 date = 2024-05-01
 draft = false
 tags = ['podman', 'sysadmin', 'devops']

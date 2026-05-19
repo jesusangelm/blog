@@ -1,0 +1,43 @@
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.Title }},
+  "url": {{ site.BaseURL }},
+  "description": {{ site.Params.description }},
+  "inLanguage": {{ site.Language.Lang }},
+  "author": {
+    "@type": "Person",
+    "name": {{ site.Params.author.name }},
+    "email": {{ site.Params.author.email }}
+  }
+}
+</script>
+{{- else if eq .Type "blog" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title }},
+  "description": {{ .Params.description }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" }},
+  {{- with .GitInfo }}
+  "dateModified": {{ .AuthorDate.Format "2006-01-02T15:04:05Z07:00" }},
+  {{- end }}
+  "author": {
+    "@type": "Person",
+    "name": {{ site.Params.author.name }}
+  },
+  "url": {{ .Permalink }},
+  "inLanguage": {{ site.Language.Lang }},
+  "publisher": {
+    "@type": "Person",
+    "name": {{ site.Params.author.name }}
+  }
+  {{- with .Params.tags }},
+  "keywords": {{ . }}
+  {{- end }}
+}
+</script>
+{{- end }}

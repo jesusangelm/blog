@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-12">
           <h3 class="pb-4 mb-4 fst-italic border-bottom">
-            Etiquetas
+            {{ T "tags" }}
           </h3>
 
           {{range $.Site.Taxonomies.tags.ByCount}}
@@ -13,7 +13,7 @@
                 <a
                   class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover"
                   href="/tags/{{.Name}}">
-                  {{.Name}} <smal>({{.Count}})</smal>
+                  {{.Name}} <small>({{.Count}})</small>
                 </a>
               </h2>
             </article>
@@ -26,13 +26,13 @@
       <div class="row">
         <div class="col-md-12">
           <h3 class="pb-4 mb-4 fst-italic border-bottom">
-            Articulos bajo la etiqueta #{{.Name}}
+            {{ T "articles_under_tag" }} #{{.Name}}
           </h3>
 
           {{ range .Paginator.Pages }}
             <article class="blog-post">
               <h2 class="display-5 link-body-emphasis mb-1"><a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="{{.RelPermalink}}">{{.LinkTitle}}</a></h2>
-              <p>{{ .Description }}</p>
+              <p>{{ .Description }} <a href="{{ .RelPermalink }}">{{ T "read_more" }} &rarr;</a></p>
             </article>
           {{ end }} {{ template "_internal/pagination.html" . }}
         </div>

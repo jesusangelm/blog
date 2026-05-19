@@ -1,0 +1,11 @@
+{{ if eq .Type "blog" }}
+<div class="share-buttons mb-3">
+  <span class="fw-bold">{{ T "share" }}:</span>
+  <a class="btn btn-sm btn-outline-dark ms-2" href="https://twitter.com/intent/tweet?text={{ .Title }}&url={{ .Permalink }}" target="_blank" rel="noopener noreferrer" title="{{ T "share_twitter" }}">
+    <i class="bi bi-twitter"></i>
+  </a>
+  <a class="btn btn-sm btn-outline-dark" href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener noreferrer" title="{{ T "share_linkedin" }}">
+    <i class="bi bi-linkedin"></i>
+  </a>
+</div>
+{{ end }}

@@ -1,0 +1,17 @@
+<p>
+  {{ if .Title }}
+    <figure>
+  {{ end }}
+  <img
+    src="{{ .Destination | safeURL }}"
+    alt="{{ .Text }}"
+    loading="lazy"
+    decoding="async"
+    {{ with .Title }}title="{{ . }}"{{ end }}
+    class="img-fluid"
+  >
+  {{ if .Title }}
+    <figcaption>{{ .Title }}</figcaption>
+    </figure>
+  {{ end }}
+</p>

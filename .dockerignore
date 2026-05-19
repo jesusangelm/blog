@@ -1,0 +1,12 @@
+.git/
+.github/
+.gitignore
+.hugo_build.lock
+public/
+resources/
+node_modules/
+*.md
+!content/**/*.md
+Dockerfile
+docker-compose*.yml
+docker-compose*.yaml

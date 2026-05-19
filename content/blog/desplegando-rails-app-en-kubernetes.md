@@ -3,7 +3,7 @@ title = "Desplegando una app Rails en Kubernetes"
 date = 2023-04-14
 draft = false
 tags = ['rails', 'kubernetes', 'devops']
-description = "Mi experiencia desplegando una aplicacion Rails real en Kubernetes."
+description = "Mi experiencia desplegando una aplicación Rails real en Kubernetes."
 +++
 
 Desde que salió al público Kubernetes, siempre me llamo la atención esta herramienta para desplegar

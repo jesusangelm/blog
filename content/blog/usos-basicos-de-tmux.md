@@ -1,5 +1,5 @@
 +++
-title = "Usos básico de Tmux"
+title = "Usos básicos de Tmux"
 date = 2025-09-12
 draft = false
 tags = ['tmux', 'sysadmin', 'devops']

@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-12">
       <h3 class="pb-4 mb-4 fst-italic border-bottom">
-        Artículos de mi blog
+        {{ T "blog_articles" }}
       </h3>
 
       {{ range .Paginator.Pages }}
@@ -19,12 +19,13 @@
           {{ $dateHuman := .Date | time.Format ":date_long" }}
           <p class="blog-post-meta">
             <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time> | 
+            {{ T "reading_time" (dict "count" .ReadingTime) }}
             {{range (.GetTerms "tags")}}
               <a class="badge text-bg-dark" href={{.Permalink}}>{{.Name}}</a>
             {{end}}
           </p>
 
-          <p>{{ .Description }}</p>
+          <p>{{ .Description }} <a href="{{ .RelPermalink }}">{{ T "read_more" }} &rarr;</a></p>
         </article>
       {{ end }} {{ template "_internal/pagination.html" . }}
     </div>

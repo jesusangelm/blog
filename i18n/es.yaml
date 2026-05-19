@@ -1,0 +1,44 @@
+- id: last_articles
+  translation: "Los últimos 3 artículos de mi blog"
+- id: blog_articles
+  translation: "Artículos de mi blog"
+- id: articles_under_tag
+  translation: "Artículos bajo la etiqueta"
+- id: tags
+  translation: "Etiquetas"
+- id: read_more
+  translation: "Leer más"
+- id: go_home
+  translation: "Ir al inicio"
+- id: skip_to_content
+  translation: "Saltar al contenido"
+- id: table_of_contents
+  translation: "Índice"
+- id: related_posts
+  translation: "Artículos relacionados"
+- id: not_found_title
+  translation: "Página no encontrada"
+- id: not_found_text
+  translation: "La página que buscas no existe."
+- id: theme_light
+  translation: "Claro"
+- id: theme_dark
+  translation: "Oscuro"
+- id: theme_auto
+  translation: "Auto"
+- id: toggle_theme
+  translation: "Cambiar tema"
+- id: reading_time
+  translation: "{{ .count }} min de lectura"
+- id: updated
+  translation: "actualizado el"
+- id: home
+  translation: "Inicio"
+- id: blog
+  translation: "Blog"
+- id: share
+  translation: "Compartir"
+- id: share_twitter
+  translation: "Compartir en X"
+- id: share_linkedin
+  translation: "Compartir en LinkedIn"

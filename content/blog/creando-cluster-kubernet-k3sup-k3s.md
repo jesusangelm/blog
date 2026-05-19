@@ -1,9 +1,9 @@
 +++
-title = "Creando un cluster Kubernetes con K3s y K3sup"
+title = "Creando un clúster Kubernetes con K3s y K3sup"
 date = 2023-04-25
 draft = false
 tags = ['kubernetes', 'devops', 'k3s', 'k3sup']
-description = "Pasos basicos para crear un cluster kubernetes desde cero, ligero y funcional."
+description = "Pasos básicos para crear un clúster Kubernetes desde cero, ligero y funcional."
 +++
 
 ![K3sup logo](https://ispz.b-cdn.net/i/b3b4cc111a93f39b2f297497973a6074/mini)

@@ -1,0 +1,13 @@
+{{ if not .IsHome }}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">{{ T "home" }}</a></li>
+    {{ if eq .Type "blog" }}
+      <li class="breadcrumb-item"><a href="/blog/">{{ T "blog" }}</a></li>
+    {{ else if eq .Type "tags" }}
+      <li class="breadcrumb-item"><a href="/tags/">{{ T "tags" }}</a></li>
+    {{ end }}
+    <li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+  </ol>
+</nav>
+{{ end }}

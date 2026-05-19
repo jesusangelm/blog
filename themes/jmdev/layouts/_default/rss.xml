@@ -1,0 +1,33 @@
+{{- /* XML declaration and RSS opening */ -}}
+{{- $description := "" -}}
+{{- if .IsHome -}}
+  {{- $description = site.Params.description -}}
+{{- else -}}
+  {{- $description = .Params.description -}}
+{{- end -}}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if eq .Title site.Title }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ $description }}</description>
+    <generator>Hugo {{ hugo.Version }}</generator>
+    <language>{{ site.Language.Lang }}</language>
+    <managingEditor>{{ site.Params.author.email }} ({{ site.Params.author.name }})</managingEditor>
+    <webMaster>{{ site.Params.author.email }} ({{ site.Params.author.name }})</webMaster>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml"/>
+    {{ range where .Pages "Type" "blog" }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <description>{{ .Description }}</description>
+      <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[{{ .Content | safeHTML }}]]></content:encoded>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <guid>{{ .Permalink }}</guid>
+      {{ with .Params.tags }}{{ range . }}
+      <category>{{ . }}</category>
+      {{ end }}{{ end }}
+    </item>
+    {{ end }}
+  </channel>
+</rss>

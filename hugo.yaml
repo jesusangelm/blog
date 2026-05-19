@@ -25,6 +25,7 @@ params:
     theme: preferred_color_scheme
     lang: es
     loading: lazy
+
 taxonomies:
   tag: tags
 
@@ -34,5 +35,49 @@ markup:
       attribute:
         block: true
         title: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false
+
+related:
+  includeNewer: true
+  threshold: 80
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+    - name: date
+      weight: 10
+
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+  filename: sitemap.xml
+
+minify:
+  minifyOutput: true
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
 
 enableRobotsTXT: true
+enableGitInfo: true
+
+menus:
+  main:
+    - name: Inicio
+      pageRef: /
+      weight: 10
+    - name: Blog
+      pageRef: /blog
+      weight: 20
+    - name: "Etiquetas"
+      pageRef: /tags
+      weight: 30
+    - name: CV
+      pageRef: /cv
+      weight: 40

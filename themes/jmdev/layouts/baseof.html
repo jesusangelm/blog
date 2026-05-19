@@ -4,11 +4,14 @@
   {{ partial "head.html" . }}
 </head>
 <body class="d-flex flex-column h-100">
+  <a class="visually-hidden-focusable" href="#main-content">{{ T "skip_to_content" }}</a>
 
   {{ partial "theme_toggle.html" . }}
 
   {{ partial "header.html" . }}
-  {{ block "main" . }}{{ end }}
+  <div id="main-content">
+    {{ block "main" . }}{{ end }}
+  </div>
   {{ partial "footer.html" . }}
 </body>
 </html>
