@@ -14,8 +14,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Hugo site
+        env:
+          HUGO_VERSION: "0.161.1"
         run: |
-          apk add --update hugo git
+          curl -sSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" \
+            -o /tmp/hugo.tar.gz
+          tar -xzf /tmp/hugo.tar.gz -C /usr/local/bin hugo
+          chmod +x /usr/local/bin/hugo
           hugo --minify
 
   docker:
