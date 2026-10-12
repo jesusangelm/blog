@@ -1,6 +1,6 @@
 baseURL: https://jesusmarin.dev/
 defaultContentLanguage: es
-languageCode: es-VE
+locale: es-VE
 title: JesusMarin.Dev
 theme: jmdev
 
