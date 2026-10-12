@@ -1,8 +1,8 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://jesusmarin.dev/'
+locale = 'es-VE'
+title = 'JesusMarin.Dev'
 
 [module]
   [module.hugoVersion]
     extended = false
-    min = "0.116.0"
+    min = "0.158.0"

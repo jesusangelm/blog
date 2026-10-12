@@ -29,12 +29,10 @@
             {{ T "articles_under_tag" }} #{{.Name}}
           </h3>
 
-          {{ range .Paginator.Pages }}
-            <article class="blog-post">
-              <h2 class="display-5 link-body-emphasis mb-1"><a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" href="{{.RelPermalink}}">{{.LinkTitle}}</a></h2>
-              <p>{{ .Description }} <a href="{{ .RelPermalink }}">{{ T "read_more" }} &rarr;</a></p>
-            </article>
-          {{ end }} {{ template "_internal/pagination.html" . }}
+          {{ range (.Paginate .Pages).Pages }}
+            {{ partial "post_card.html" . }}
+          {{ end }}
+          {{ partial "pagination.html" . }}
         </div>
       </div>
     </main>
