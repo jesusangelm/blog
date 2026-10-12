@@ -53,19 +53,17 @@ related:
 sitemap:
   changefreq: weekly
   priority: 0.5
-  filename: sitemap.xml
 
 minify:
   minifyOutput: true
-  disableCSS: false
-  disableHTML: false
-  disableJS: false
-  disableJSON: false
-  disableSVG: false
-  disableXML: false
+
+outputs:
+  home: [html, rss]
+  section: [html]
+  taxonomy: [html]
+  term: [html]
 
 enableRobotsTXT: true
-enableGitInfo: true
 
 menus:
   main:

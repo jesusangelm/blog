@@ -2,7 +2,7 @@
 FROM docker.io/debian:trixie-slim AS build
 RUN apt-get update && \
     apt-get install -y --no-install-recommends curl ca-certificates && \
-    curl -sSL "https://github.com/gohugoio/hugo/releases/download/v0.160.1/hugo_extended_0.160.1_Linux-64bit.tar.gz" \
+    curl -sSL "https://github.com/gohugoio/hugo/releases/download/v0.167.0/hugo_extended_0.167.0_Linux-64bit.tar.gz" \
     -o /tmp/hugo.tar.gz && \
     tar -xzf /tmp/hugo.tar.gz -C /usr/local/bin hugo && \
     chmod +x /usr/local/bin/hugo && \
@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 WORKDIR /opt/HugoApp
 COPY . .
-RUN HUGO_ENABLEGITINFO=false hugo --minify
+RUN hugo --minify
 
 # Stage 2
 FROM docker.io/nginx:stable-alpine
